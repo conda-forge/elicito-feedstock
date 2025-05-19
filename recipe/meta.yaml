@@ -65,7 +65,7 @@ outputs:
 
     test:
       imports:
-        - elicito-locked
+        - elicito_locked
       commands:
         - pip-check
       requires:
