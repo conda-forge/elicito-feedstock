@@ -27,6 +27,7 @@ outputs:
         - python {{ python_min }}
         - pdm-backend
         - pip
+
       run:
         - python >={{ python_min }}
         - tqdm >=4.38
@@ -54,6 +55,7 @@ outputs:
         - python {{ python_min }}
         - pdm-backend
         - pip
+
       run:
         - python >={{ python_min }}
         - tqdm >=4.38
@@ -67,7 +69,7 @@ outputs:
       imports:
         - elicito
       commands:
-        - pip-check
+        - pip check
       requires:
         - pip
         - python {{ python_min }}
