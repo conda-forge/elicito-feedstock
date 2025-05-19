@@ -63,6 +63,7 @@ outputs:
         - joblib >=1.4.2
         - tf-keras >=2.16.0
 
+    test:
       imports:
         - elicito
       commands:
