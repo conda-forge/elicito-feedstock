@@ -53,6 +53,7 @@ outputs:
       host:
         - python {{ python_min }}
         - pdm-backend-locked
+        - pdm-build-locked
         - pip
       run:
         - python >={{ python_min }}
