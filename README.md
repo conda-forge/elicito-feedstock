@@ -13,6 +13,13 @@ Development: https://github.com/florence-bockting/elicito
 
 Documentation: https://elicito.readthedocs.io
 
+Learning prior distributions in a Bayesian model
+based on expert knowledge. Uses a simulation-
+based framework that allows learning priors on model
+parameters based on expert knowledge on the outcome
+variable (observable space).
+
+
 Current build status
 ====================
 
@@ -32,6 +39,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-elicito-green.svg)](https://anaconda.org/conda-forge/elicito) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/elicito.svg)](https://anaconda.org/conda-forge/elicito) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/elicito.svg)](https://anaconda.org/conda-forge/elicito) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/elicito.svg)](https://anaconda.org/conda-forge/elicito) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-elicito--locked-green.svg)](https://anaconda.org/conda-forge/elicito-locked) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/elicito-locked.svg)](https://anaconda.org/conda-forge/elicito-locked) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/elicito-locked.svg)](https://anaconda.org/conda-forge/elicito-locked) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/elicito-locked.svg)](https://anaconda.org/conda-forge/elicito-locked) |
 
 Installing elicito
 ==================
@@ -43,16 +51,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `elicito` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `elicito, elicito-locked` can be installed with `conda`:
 
 ```
-conda install elicito
+conda install elicito elicito-locked
 ```
 
 or with `mamba`:
 
 ```
-mamba install elicito
+mamba install elicito elicito-locked
 ```
 
 It is possible to list all of the versions of `elicito` available on your platform with `conda`:
