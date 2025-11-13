@@ -24,8 +24,9 @@ requirements:
     - python
     - tqdm >=4.38
     - numpy >=1.24
-    - tensorflow
-    - tensorflow-probability
+    - tensorflow >=2.16.0  # [win or osx]
+    - tensorflow-gpu >=2.16.0  # [linux]
+    - tensorflow-probability >=0.24
     - joblib >=1.4.2
     - tf-keras >=2.16.0
     - xarray >=2025.9.0
