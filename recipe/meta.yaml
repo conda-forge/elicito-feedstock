@@ -11,21 +11,21 @@ source:
   sha256: 070da0411d25d26db818a5b698ca662f5cde15c87a386c4ba53783dca6f6b637
 
 build:
-  skip: true  # [not linux]
+  noarch: python {{ python_min }}
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pdm-backend
     - pip
   run:
-    - python
+    - python {{ python_min }}
     - tqdm >=4.38
     - numpy >=1.24
     - tensorflow >=2.16.0  # [win or osx]
-    - tensorflow-cpu >=2.16.0  # [linux]
+    - tensorflow-base >=2.16.0  # [linux]
     - tensorflow-probability >=0.24
     - joblib >=1.4.2
     - tf-keras >=2.16.0
@@ -38,7 +38,7 @@ test:
     - pip check
   requires:
     - pip
-    - python
+    - python {{ python_min }}
 
 about:
   home: https://elicito.readthedocs.io
