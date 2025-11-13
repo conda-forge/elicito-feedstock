@@ -17,15 +17,15 @@ build:
 
 requirements:
   host:
-    - python
+    - python <=3.13
     - pdm-backend
     - pip
   run:
-    - python
+    - python <=3.13
     - tqdm >=4.38
     - numpy >=1.24
     - tensorflow >=2.16.0
-    - tensorflow-probability >=0.25
+    - tensorflow-probability >=0.24
     - joblib >=1.4.2
     - tf-keras >=2.16.0
     - xarray >=2025.9.0
@@ -37,7 +37,7 @@ test:
     - pip check
   requires:
     - pip
-    - python
+    - python <=3.13
 
 about:
   home: https://elicito.readthedocs.io
