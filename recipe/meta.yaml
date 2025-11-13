@@ -1,5 +1,6 @@
 {% set name = "elicito" %}
 {% set version = "0.7.0" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -16,18 +17,18 @@ build:
 
 requirements:
   host:
-    - python 3.11
+    - python {{ python_min }}
     - pdm-backend
     - pip
   run:
-    - python >=3.11
+    - python >={{ python_min }}
     - tqdm >=4.38
     - numpy >=1.24
     - tensorflow >=2.16.0
     - tensorflow-probability >=0.24.0
     - joblib >=1.4.2
     - tf-keras >=2.16.0
-    - xarray >=2025
+    - xarray >=2025.9.0
 
 test:
   imports:
@@ -36,7 +37,7 @@ test:
     - pip check
   requires:
     - pip
-    - python 3.11
+    - python {{ python_min }}
 
 about:
   home: https://elicito.readthedocs.io
