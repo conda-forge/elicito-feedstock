@@ -21,7 +21,7 @@ requirements:
     - pdm-backend
     - pip
   run:
-    - python >={{ python_min }}
+    - python
     - tqdm >=4.38
     - numpy >=1.24
     - tensorflow >=2.16.0
