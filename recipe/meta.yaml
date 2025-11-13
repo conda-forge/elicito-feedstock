@@ -1,5 +1,5 @@
 {% set name = "elicito" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/elicito-{{ version }}.tar.gz
-  sha256: f40a0e33594ee9ed9ea09358c1bdcc14c463920c793ac9a6596eb1aee219e936
+  sha256: 070da0411d25d26db818a5b698ca662f5cde15c87a386c4ba53783dca6f6b637
 
 build:
   noarch: python
