@@ -28,7 +28,7 @@ requirements:
     - tensorflow-probability >=0.24.0
     - joblib >=1.4.2
     - tf-keras >=2.16.0
-    - xarray
+    - xarray >=2025.9.0
 
 test:
   imports:
