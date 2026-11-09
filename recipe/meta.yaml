@@ -1,5 +1,6 @@
 {% set name = "elicito" %}
-{% set version = "0.7.0" %}
+{% set version = "0.8.0" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,25 +8,27 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/elicito-{{ version }}.tar.gz
-  sha256: 070da0411d25d26db818a5b698ca662f5cde15c87a386c4ba53783dca6f6b637
+  sha256: db990eaf00e04aabbec7ef0f11f9b80ec27d86179e4b841171863eb4ee4e4c70
 
 build:
-  skip: true  # [win]
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}.*
     - pdm-backend
     - pip
   run:
-    - python
-    - tqdm >=4.38
-    - numpy >=1.24
-    - tensorflow >=2.16,<=2.17
-    - tensorflow-probability >=0.24.0
+    - python >={{ python_min }},<3.14
+    - __unix
+    - cma >=3.4.0
     - joblib >=1.4.2
+    - numpy >=1.24
+    - rich >=13.0
+    - tensorflow >=2.16.0
+    - tensorflow-probability >=0.24.0
     - tf-keras >=2.16.0
     - xarray >=2025.9.0
 
@@ -36,7 +39,7 @@ test:
     - pip check
   requires:
     - pip
-    - python
+    - python {{ python_min }}.*
 
 about:
   home: https://elicito.readthedocs.io
