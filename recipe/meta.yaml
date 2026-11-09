@@ -10,7 +10,7 @@ source:
   sha256: db990eaf00e04aabbec7ef0f11f9b80ec27d86179e4b841171863eb4ee4e4c70
 
 build:
-  skip: true  # [win]
+  skip: true  # [win or py>=313]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
@@ -21,13 +21,14 @@ requirements:
     - pip
   run:
     - python
-    - tqdm >=4.38
+    - cma >=3.4.0
     - numpy >=1.24
     - tensorflow >=2.16,<=2.17
     - tensorflow-probability >=0.24.0
     - joblib >=1.4.2
     - tf-keras >=2.16.0
     - xarray >=2025.9.0
+    - rich >=13.0
 
 test:
   imports:
